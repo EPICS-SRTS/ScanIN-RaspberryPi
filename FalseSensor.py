@@ -13,19 +13,6 @@ from random import randint
 
 ### Helper functions
 
-# Check whether serial read RFID packet is valid
-def validate(RFID_Packet):
-	if RFID_Packet[0:6] == '1100ee':
-        print "Packet is valid"
-		return True
-	else:
-		print "Packet is noisy"
-		return False
-		
-# Extracts the significant bits from a packet
-def extract(RFID_Packet):
-	return RFID_Packet[8:32]
-	
 # Execute the upload commands
 def pushPHP(data, time):
 	for id in data: # Recall data is an array/list of tag IDs
