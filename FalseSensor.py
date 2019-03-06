@@ -29,7 +29,7 @@ def extract(RFID_Packet):
 # Execute the upload commands
 def pushPHP(data, time):
 	for id in data: # Recall data is an array/list of tag IDs
-		(output, err) = subprocess.Popen("phpCommand", shell=False).communicate()
+		(output, err) = subprocess.Popen("php upload.php " + str(id), shell=False).communicate()
 	# Should be done!
 	print("Upload of " + str(len(data)) + " IDs complete.")
 		
