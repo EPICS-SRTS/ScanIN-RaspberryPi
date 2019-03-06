@@ -31,7 +31,7 @@ class database
 
     function upload($data)
     {
-        $sql = "INSERT INTO `Data`(`Data`) VALUES ('" . $data . "')";
+        $sql = "INSERT INTO `Data`(`Data`) VALUES ('" . $data . "');";
         $this->conn->query($sql);
     }
 
