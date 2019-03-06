@@ -45,7 +45,7 @@ while (true):
 	i = 0
 	t = randint(10,100)
 	while (i++ < t):
-	tag = "thisIsNotRealData" + str(randint(0,9))+ str(randint(0,9))+ str(randint(0,9))+ str(randint(0,9))+ str(randint(0,9))+ str(randint(0,9))+ str(randint(0,9))
+		tag = "thisIsNotRealData" + str(randint(0,9))+ str(randint(0,9))+ str(randint(0,9))+ str(randint(0,9))+ str(randint(0,9))+ str(randint(0,9))+ str(randint(0,9))
 		consumedScans.append(tag)
 		
 	# end while
