@@ -16,12 +16,13 @@ class database
     public $servername = "localhost";
     public $username = "srts";
     public $password = "123123";
+    public $dbname = "SRTS";
     public $conn;
 
     function connect()
     {
         // Create connection
-        $this->conn = new mysqli($this->servername, $this->username, $this->password);
+        $this->conn = new mysqli($this->servername, $this->username, $this->password, $this->dbname);
 
         // Check connection
         if ($this->conn->connect_error) {
@@ -31,8 +32,7 @@ class database
 
     function upload($data)
     {
-        $sql = "USE SRTS;
-        INSERT INTO `Data`(`Data`) VALUES ('" . $data . "');";
+        $sql = "INSERT INTO `Data`(`Data`) VALUES ('" . $data . "');";
         $this->conn->query($sql);
     }
 
