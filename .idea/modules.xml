@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/ScanIN-RaspberryPi.iml" filepath="$PROJECT_DIR$/.idea/ScanIN-RaspberryPi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ScanIN-WHMCS/.idea/ScanIN-WHMCS.iml" filepath="$PROJECT_DIR$/../ScanIN-WHMCS/.idea/ScanIN-WHMCS.iml" />
     </modules>
   </component>
 </project>

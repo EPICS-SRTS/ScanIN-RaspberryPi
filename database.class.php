@@ -13,9 +13,9 @@ use mysqli;
 
 class database
 {
-    public $servername;
-    public $username;
-    public $password;
+    public $servername = "localhost";
+    public $username = "srts";
+    public $password = "123123";
     public $conn;
 
     function connect()
@@ -27,6 +27,12 @@ class database
         if ($this->conn->connect_error) {
             die("Connection failed: " . $this->conn->connect_error);
         }
+    }
+
+    function upload($data)
+    {
+        $sql = "INSERT INTO `Data`(`Data`) VALUES ('" . $data . "')";
+        $this->conn->query($sql);
     }
 
 }
