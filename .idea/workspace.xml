@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e28070fe-cf26-4dc4-9253-435a801e0de6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/database.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/database.class.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/multiThreader.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/threadedFile.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../ScanIN-WHMCS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ScanIN-WHMCS/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,24 +34,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="multiThreader.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/multiThreader.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="threadedFile.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/threadedFile.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
@@ -62,6 +46,7 @@
         <option value="$PROJECT_DIR$/threadedFile.php" />
         <option value="$PROJECT_DIR$/upload.php" />
         <option value="$PROJECT_DIR$/database.class.php" />
+        <option value="$PROJECT_DIR$/FalseSensor.py" />
       </list>
     </option>
   </component>
@@ -134,12 +119,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1551826112154</updated>
-      <workItem from="1551826115363" duration="2897000" />
+      <workItem from="1551826115363" duration="3539000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2897000" />
+    <option name="totallyTimeSpent" value="3539000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -197,6 +182,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FalseSensor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="16" column="24" lean-forward="true" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
         </state>
       </provider>
     </entry>
