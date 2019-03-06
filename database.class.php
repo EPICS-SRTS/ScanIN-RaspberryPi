@@ -31,7 +31,8 @@ class database
 
     function upload($data)
     {
-        $sql = "INSERT INTO `Data`(`Data`) VALUES ('" . $data . "');";
+        $sql = "USE SRTS;
+        INSERT INTO `Data`(`Data`) VALUES ('" . $data . "');";
         $this->conn->query($sql);
     }
 
