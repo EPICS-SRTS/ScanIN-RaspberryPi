@@ -83,7 +83,7 @@ while (serialOpen):
 			tag = extract(packet)
 			consumedScans.append(tag)
 			
-		else:
+		# else:
 			# The packet is noisy, and may contain erroneous data
 	# end while
 	# We now have all the data from the one waiting period.
