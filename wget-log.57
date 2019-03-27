@@ -1,0 +1,5 @@
+--2019-03-21 23:28:01--  https://admin.scaninsystem.com/upload.php
+Resolving admin.scaninsystem.com (admin.scaninsystem.com)... 173.236.34.242
+Connecting to admin.scaninsystem.com (admin.scaninsystem.com)|173.236.34.242|:443... connected.
+GnuTLS: The TLS connection was non-properly terminated.
+Unable to establish SSL connection.

@@ -1,0 +1,11 @@
+--2019-03-21 23:27:47--  https://admin.scaninsystem.com/upload.php
+Resolving admin.scaninsystem.com (admin.scaninsystem.com)... 173.236.34.242
+Connecting to admin.scaninsystem.com (admin.scaninsystem.com)|173.236.34.242|:443... connected.
+HTTP request sent, awaiting response... 200 ‘wget-log.93’
+Length: 31 [text/html]
+Saving to: ‘upload.php.131.19’
+
+     0K                                                       100% 6.68M=0s
+
+2019-03-21 23:28:57 (6.68 MB/s) - ‘upload.php.131.19’ saved [31/31]
+
