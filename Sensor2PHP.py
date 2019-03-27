@@ -9,7 +9,7 @@ import time
 import datetime
 import sys
 import subprocess
-import thread
+import _thread
 
 ### Helper functions
 
@@ -19,7 +19,7 @@ def validate(RFID_Packet):
         print "Packet is valid"
 		return True
 	else:
-		print "Packet is noisy"
+		print "Packet is noisy: " + str(RFID_Packet)
 		return False
 		
 # Extracts the significant bits from a packet
@@ -29,7 +29,7 @@ def extract(RFID_Packet):
 # Execute the upload commands
 def pushPHP(data, time):
 	for id in data: # Recall data is an array/list of tag IDs
-		(output, err) = subprocess.Popen("phpCommand", shell=False).communicate()
+		os.system("php /home/pi/ScanIN-RaspberryPi/upload.php " + str(id))
 	# Should be done!
 	print("Upload of " + str(len(data)) + " IDs complete.")
 		
@@ -89,4 +89,4 @@ while (serialOpen):
 	# We now have all the data from the one waiting period.
 	# Execute the PHP shell command to process them.
 	# We'll do this on a new thread so that the scanner can continue working.
-	thread.start_new_thread(pushPHP, (consumedScans, processTime))
+	_thread.start_new_thread(pushPHP, (consumedScans, processTime))
