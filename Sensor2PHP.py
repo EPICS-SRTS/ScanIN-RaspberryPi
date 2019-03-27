@@ -16,10 +16,10 @@ import _thread
 # Check whether serial read RFID packet is valid
 def validate(RFID_Packet):
 	if RFID_Packet[0:6] == '1100ee':
-        print "Packet is valid"
+		print ("Packet is valid")
 		return True
 	else:
-		print "Packet is noisy: " + str(RFID_Packet)
+		print ("Packet is noisy: " + str(RFID_Packet))
 		return False
 		
 # Extracts the significant bits from a packet
