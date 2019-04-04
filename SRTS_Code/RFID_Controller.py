@@ -39,7 +39,6 @@ def extract_tag_number(RFID_Packet):
 while True:
     try:
         # Infinite loop to scan tags and run them against the DB
-        time.sleep(0.2)
         bytesToRead = rfid_serial.inWaiting()
         if (bytesToRead > 0):
             # time.sleep(1)
@@ -49,7 +48,6 @@ while True:
             if is_valid_RFID_Packet(RFID_Packet):
                 tag_number = extract_tag_number(RFID_Packet)
                 print tag_number
-                process_scan(q, tag_number)
                 print(tag_number)
                 print("\n")
 
