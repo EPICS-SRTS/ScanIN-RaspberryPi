@@ -50,8 +50,9 @@ while True:
                 print tag_number
                 print(tag_number)
                 print("\n")
-
-            rfid_serial.flushInput()
+                rfid_serial.flushInput()
+            else:
+                rfid_serial.flushInput()
 
     except:
         e = sys.exc_info()[0]
