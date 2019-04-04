@@ -27,7 +27,7 @@ while (not serialOpen):
 
 # Check whether serial read RFID packet is valid
 def is_valid_RFID_Packet(RFID_Packet):
-    if RFID_Packet[0:2] == 'e2':
+    if RFID_Packet[0:6] == 'ee00e2':
         print "valid"
         return True
     else:
