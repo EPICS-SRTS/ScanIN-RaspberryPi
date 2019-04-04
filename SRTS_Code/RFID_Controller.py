@@ -5,10 +5,8 @@ import serial
 import binascii
 import sys
 
-time.sleep(5)
+time.sleep(1)
 
-from DB_Controller import process_scan, reset_already
-from MatrixController import launch_matrix
 from multiprocessing import Process, Queue
 
 # Open RFID Serial connection
