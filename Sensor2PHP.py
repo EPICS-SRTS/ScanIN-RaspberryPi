@@ -77,18 +77,21 @@ while (serialOpen):
 		#     up dirty data as it came in. Is it necessary here? [YES IT IS]
 
 		# We filter through the unconsumed bytes until we find a header (226)
-		header = rfid_serial.read(1)    # get one byte
-		if int(header) == 226:          # if this is a header byte...
-                        packet = rfid_serial.read(10)
-                        packet = binascii.hexlify(packet)
-                        print("Scanned: " + str(packet))
-                        if (validate(packet)):
-                                # The packet is guaranteed to be correct.
-                                tag = extract(packet)
-                                consumedScans.append(tag)
-                        # else:
-                                # The packet is noisy, and may contain erroneous data
-                # else: # haven't found a header, keep looking
+		header = byte(rfid_serial.read(1))    # get one byte
+		try:
+                        if int(header) == 226:          # if this is a header byte...
+                                packet = rfid_serial.read(10)
+                                packet = binascii.hexlify(packet)
+                                print("Scanned: " + str(packet))
+                                if (validate(packet)):
+                                        # The packet is guaranteed to be correct.
+                                        tag = extract(packet)
+                                        consumedScans.append(tag)
+                                # else:
+                                        # The packet is noisy, and may contain erroneous data
+                        # else: # haven't found a header, keep looking
+                except:
+                        pass
 	# end while
 	
 	# We now have all the data from the one waiting period.
