@@ -5,8 +5,6 @@ import serial
 import binascii
 import sys
 
-time.sleep(1)
-
 from multiprocessing import Process, Queue
 
 # Open RFID Serial connection
@@ -41,7 +39,7 @@ def extract_tag_number(RFID_Packet):
 while True:
     try:
         # Infinite loop to scan tags and run them against the DB
-        time.sleep(1)
+        time.sleep(0.2)
         bytesToRead = rfid_serial.inWaiting()
         if (bytesToRead > 0):
             # time.sleep(1)
