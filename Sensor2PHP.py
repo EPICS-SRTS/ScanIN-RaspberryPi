@@ -83,12 +83,12 @@ while (serialOpen):
 				packet = rfid_serial.read(10)
 				packet = binascii.hexlify(packet)
 				print("Scanned: " + str(packet))
-					if (validate(packet)):
-						# The packet is guaranteed to be correct.
-						tag = extract(packet)
-						consumedScans.append(tag)
-					# else:
-						# The packet is noisy, and may contain erroneous data
+				if (validate(packet)):
+					# The packet is guaranteed to be correct.
+					tag = extract(packet)
+					consumedScans.append(tag)
+				# else:
+					# The packet is noisy, and may contain erroneous data
 			# else: # haven't found a header, keep looking
 		except:
 			pass
