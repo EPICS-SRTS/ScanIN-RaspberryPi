@@ -29,7 +29,8 @@ def extract(RFID_Packet):
 # Execute the upload commands
 def pushPHP(data, time):
 	for id in data: # Recall data is an array/list of tag IDs
-		os.system("php /home/pi/ScanIN-RaspberryPi/upload.php " + str(id))
+		#os.system("php /home/pi/ScanIN-RaspberryPi/upload.php " + str(id))
+                print(str(id))
 	# Should be done!
 	print("Upload of " + str(len(data)) + " IDs complete.")
 		
