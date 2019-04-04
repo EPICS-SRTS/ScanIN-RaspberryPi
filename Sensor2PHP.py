@@ -60,7 +60,7 @@ while (not serialOpen):
 #  begin listening for incoming messages.
 
 while (serialOpen):
-	time.sleep(1) # Adjust as necessary
+	time.sleep(1) # Adjust as necessary, in seconds
 	unconsumedBytes = rfid_serial.inWaiting()
 	consumedScans = []
 	processTime = time.localtime()
@@ -73,9 +73,13 @@ while (serialOpen):
 		
 		# [!] There is probably a safer way to compile these.
 		#     My (Eugene's) initial Arduino code was able to clean
-		#     up dirty data as it came in. Is it necessary here?
+		#     up dirty data as it came in. Is it necessary here? [YES IT IS]
+
+		# We filter through the unconsumed bytes until we find a header (226)
+		header = rfid)serial.read(1)    # get one byte
+		if int(header) == 226:          # if this is a header byte...
 		
-		packet = rfid_serial.read(18)
+		packet = rfid_serial.read(10)
 		packet = binascii.hexlify(packet)
 		print("Scanned: " + str(packet))
 		if (validate(packet)):
