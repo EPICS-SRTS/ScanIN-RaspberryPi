@@ -84,6 +84,7 @@ while (serialOpen):
 
 		# We filter through the unconsumed bytes until we find a header (226)
 		header = bytes(rfid_serial.read(1))  # get one byte
+		unconsumedBytes = unconsumedBytes - 1;
 		#try:
 		#print("Looking for header: " + str(header));
 		if str(header) == "b'\xe2'":  # if this is a header byte...
