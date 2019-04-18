@@ -16,6 +16,7 @@ import _thread
 
 # Check whether serial read RFID packet is valid
 def validate(RFID_Packet):
+	print("I read: " + RFID_Packet);
     if RFID_Packet[0:6] == '1100ee':
         print ("Packet is valid")
         return True
@@ -83,14 +84,15 @@ while (serialOpen):
         # We filter through the unconsumed bytes until we find a header (226)
         header = bytes(rfid_serial.read(1))  # get one byte
         try:
+			print("Looking for header: " + header);
             if int(header) == 226:  # if this is a header byte...
                 packet = rfid_serial.read(12)
                 packet = binascii.hexlify(packet)
                 print("Scanned: " + str(packet))
-                if (validate(packet)):
+                #if (validate(packet)):
                     # The packet is guaranteed to be correct.
-                    tag = extract(packet)
-                    consumedScans.append(tag)
+                #    tag = extract(packet)
+                #   consumedScans.append(tag)
             # else:
             # The packet is noisy, and may contain erroneous data
         # else: # haven't found a header, keep looking
