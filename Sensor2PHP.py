@@ -81,10 +81,10 @@ while (serialOpen):
         #	 up dirty data as it came in. Is it necessary here? [YES IT IS]
 
         # We filter through the unconsumed bytes until we find a header (226)
-        header = byte(rfid_serial.read(1))  # get one byte
+        header = bytes(rfid_serial.read(1))  # get one byte
         try:
             if int(header) == 226:  # if this is a header byte...
-                packet = rfid_serial.read(10)
+                packet = rfid_serial.read(12)
                 packet = binascii.hexlify(packet)
                 print("Scanned: " + str(packet))
                 if (validate(packet)):
