@@ -87,7 +87,7 @@ while (serialOpen):
 		unconsumedBytes = unconsumedBytes - 1;
 		#try:
 		print("Looking for header: " + str(header));
-		if str(header) == "b'\xe2'":  # if this is a header byte...
+		if str(header) == "\xe2":  # if this is a header byte...
 			packet = rfid_serial.read(12)
 			packet = binascii.hexlify(packet)
 			print("Scanned: " + str(packet))
