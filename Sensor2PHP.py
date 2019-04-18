@@ -84,22 +84,22 @@ while (serialOpen):
 
 		# We filter through the unconsumed bytes until we find a header (226)
 		header = bytes(rfid_serial.read(1))  # get one byte
-		try:
-			print("Looking for header: " + int(header));
-			if int(header) == 226:  # if this is a header byte...
-				packet = rfid_serial.read(12)
-				packet = binascii.hexlify(packet)
-				print("Scanned: " + str(packet))
-				#if (validate(packet)):
-					# The packet is guaranteed to be correct.
-				#	tag = extract(packet)
-				#   consumedScans.append(tag)
-			# else:
-			# The packet is noisy, and may contain erroneous data
+		#try:
+		print("Looking for header: " + int(header));
+		if int(header) == 226:  # if this is a header byte...
+			packet = rfid_serial.read(12)
+			packet = binascii.hexlify(packet)
+			print("Scanned: " + str(packet))
+			#if (validate(packet)):
+				# The packet is guaranteed to be correct.
+			#	tag = extract(packet)
+			#   consumedScans.append(tag)
+		# else:
+		# The packet is noisy, and may contain erroneous data
 		# else: # haven't found a header, keep looking
-		except:
-			print("EXCEPTION");
-			pass
+		#except:
+		#	print("EXCEPTION");
+		#	pass
 	# end while
 
 	# We now have all the data from the one waiting period.
