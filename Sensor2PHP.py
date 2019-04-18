@@ -70,6 +70,7 @@ while (serialOpen):
 	unconsumedBytes = rfid_serial.inWaiting()
 	consumedScans = []
 	processTime = time.localtime()
+	print("Unconsumed: " + str(unconsumedBytes));
 	while (unconsumedBytes > 0):
 		# Old system consumed one tag per waiting,
 		# which may have accounted for the missed data.
@@ -84,7 +85,7 @@ while (serialOpen):
 		# We filter through the unconsumed bytes until we find a header (226)
 		header = bytes(rfid_serial.read(1))  # get one byte
 		try:
-			print("Looking for header: " + header);
+			print("Looking for header: " + int(header));
 			if int(header) == 226:  # if this is a header byte...
 				packet = rfid_serial.read(12)
 				packet = binascii.hexlify(packet)
@@ -97,6 +98,7 @@ while (serialOpen):
 			# The packet is noisy, and may contain erroneous data
 		# else: # haven't found a header, keep looking
 		except:
+			print("EXCEPTION");
 			pass
 	# end while
 
